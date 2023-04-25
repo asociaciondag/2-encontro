@@ -139,10 +139,6 @@ main {
   @media (max-width: 650px) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-  @media (min-width: 801px) {
-    position: sticky;
-    top: 100px;
-  }
 }
 
 .header {
@@ -221,9 +217,11 @@ main {
   border-top: solid 1px var(--color-white);
   padding-top: 48px;
   display: flex;
-  column-gap: 10vw;
+  column-gap: min(10vw, 100px);
   row-gap: 48px;
   flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 
   & img {
     display: block;
